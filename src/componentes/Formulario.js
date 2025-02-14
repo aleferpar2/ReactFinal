@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import destinos from '../data/Destinos.js';
 
 const Formulario = () => {
-  const [formData, setFormData] = useState({ nombre: '', apellido1: '', apellido2: '', dni: '', telefono: '', destino1: '', destino2: '', destino3: ''});
+  const [formData, setFormData] = useState({ nombre: '', apellido1: '', apellido2: '', dni: '', telefono: '', destino1: '', destino2: '', destino3: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +22,7 @@ const Formulario = () => {
   };
 
   const handleReset = () => {
-    setFormData({ nombre: '', apellido1: '', apellido2: '', dni: '', telefono: '', destino1: '', destino2: '', destino3: ''});
+    setFormData({ nombre: '', apellido1: '', apellido2: '', dni: '', telefono: '', destino1: '', destino2: '', destino3: '' });
   };
 
   const { nombre, apellido1, apellido2, dni, telefono, destino1, destino2, destino3 } = formData;
@@ -34,31 +34,31 @@ const Formulario = () => {
       <input type="text" name="apellido2" placeholder="Segundo Apellido" value={apellido2} onChange={handleChange} required />
       <input type="text" name="dni" placeholder="DNI" value={dni} onChange={handleChange} required />
       <input type="number" name="telefono" placeholder="Teléfono" value={telefono} onChange={handleChange} required />
-      
+
       <select name="destino1" value={destino1} onChange={handleChange} required>
         <option value="">Seleccione el primer destino</option>
         {destinos.map((destino, index) => (
           <option key={index} value={destino.nombre}>{destino.nombre}</option>
         ))}
       </select>
-      
-      <select name="destino2" disabled={!destino1 }value={destino2} onChange={handleChange} required>
+
+      <select name="destino2" disabled={!destino1} value={destino2} onChange={handleChange} required>
         <option value="">Seleccione el segundo destino</option>
-        
+
         {destinos.filter((destino) => destino.nombre !== destino1).map((destino, index) => (
           <option key={index} value={destino.nombre}>{destino.nombre}</option>
         ))}
       </select>
-      
+
       <select name="destino3" disabled={!destino2} value={destino3} onChange={handleChange} required>
         <option value="">Seleccione el tercer destino</option>
-        {destinos.filter((destino) => destino.nombre !== destino1  && destino.nombre !== destino2).map((destino, index) => (
+        {destinos.filter((destino) => destino.nombre !== destino1 && destino.nombre !== destino2).map((destino, index) => (
           <option key={index} value={destino.nombre}>{destino.nombre}</option>
         ))}
       </select>
-      
+
       <button type="submit">Enviar</button>
-      <button type="button" onClick={handleReset}>Borrar</button>
+      <button type="button" onClick={handleReset}>F5</button>
     </form>
   );
 };

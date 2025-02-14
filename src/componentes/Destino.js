@@ -15,14 +15,14 @@ const Destino = () => {
 
   return (
     <div className="destino-container">
-    <h1>Votación para el viaje de fin de curso</h1>
-    <h2>{destino.nombre}</h2>
-    <img src={destino.foto} alt={destino.nombre} />
-    <p>{destino.descripcion}</p>
-    <p>Precio: {destino.precio}€</p>
-    <button onClick={anterior} disabled={indice === 0}>Anterior</button>
-    <button onClick={siguiente} disabled={indice === destinos.length - 1}>Siguiente</button>
-  </div>
+      <h1>Votación para el viaje de fin de curso</h1>
+      <h2>{destino.nombre}</h2>
+      <img src={destino.foto} alt={destino.nombre} />
+      <p>{destino.descripcion}</p>
+      <p>Precio: {destino.precio}€</p>
+      <button onClick={anterior} disabled={indice === 0}>Anterior</button>
+      <button onClick={siguiente} disabled={indice === destinos.length - 1}>Siguiente</button>
+    </div>
   );
 };
 
