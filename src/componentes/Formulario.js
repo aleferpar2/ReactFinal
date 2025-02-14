@@ -32,21 +32,21 @@ const Formulario = () => {
       <select name="destino1" value={formData.destino1} onChange={handleChange} required>
         <option value="">Seleccione el primer destino</option>
         {destinos.map((destino, index) => (
-          <option key={index} value={destino.nombre}>{destino.nombre}</option> // Accede al 'nombre' si 'destino' es un objeto
+          <option key={index} value={destino.nombre}>{destino.nombre}</option>
         ))}
       </select>
       
       <select name="destino2" value={formData.destino2} onChange={handleChange} required>
         <option value="">Seleccione el segundo destino</option>
         {destinos.map((destino, index) => (
-          <option key={index} value={destino.nombre}>{destino.nombre}</option> // Igual que antes
+          <option key={index} value={destino.nombre}>{destino.nombre}</option>
         ))}
       </select>
       
       <select name="destino3" value={formData.destino3} onChange={handleChange} required>
         <option value="">Seleccione el tercer destino</option>
         {destinos.map((destino, index) => (
-          <option key={index} value={destino.nombre}>{destino.nombre}</option> // Igual que antes
+          <option key={index} value={destino.nombre}>{destino.nombre}</option>
         ))}
       </select>
       

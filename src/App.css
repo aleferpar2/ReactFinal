@@ -45,7 +45,7 @@ body {
   color: #444;
 }
 
-/* Título principal */
+
 h1 {
   background: linear-gradient(135deg, #64b3f4, #70c9e8);
   color: white;
@@ -57,7 +57,7 @@ h1 {
   animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Contenedor de los destinos */
+
 .destino-container {
   background: white;
   padding: 20px;
@@ -80,7 +80,7 @@ h1 {
   box-shadow: 0 10px 25px rgba(0, 139, 255, 0.3);
 }
 
-/* Botones de navegación */
+
 button {
   background: linear-gradient(135deg, #6a90b8, #70a9c3);
   color: white;
@@ -106,7 +106,7 @@ button:hover:not(:disabled) {
   box-shadow: 0px 6px 12px rgba(0, 127, 255, 0.3);
 }
 
-/* Formulario */
+
 form {
   background: white;
   padding: 25px;
@@ -136,7 +136,7 @@ input:focus, select:focus {
   transform: scale(1.02);
 }
 
-/* Animaciones */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-15px); }
   to { opacity: 1; transform: translateY(0); }
